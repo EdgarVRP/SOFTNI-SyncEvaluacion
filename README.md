@@ -36,3 +36,12 @@ pkgs.python37Packages.buildPythonApplication {
 Se crea el archivo `Procfile` en la raiz con lo siguiente:
 
 `web: nix-shell --run "python app.py" --pure`
+
+
+Se instala la herramienta:
+
+pip install pipreqs
+
+Se el siguientecodigo para generar el requirements.txt:
+
+pipreqs .

@@ -17,7 +17,7 @@ db = client[database]
 col = db[collection]
 
 
-class ClienteController(Resource):
+class EvaluacionController(Resource):
     
     # Mostrando todos los clientes o un cliente por id
     @cross_origin()

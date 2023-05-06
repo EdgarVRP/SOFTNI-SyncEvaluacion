@@ -1,9 +1,9 @@
-with import <nixpkgs> {};
+{ pkgs ? import <nixpkgs> {} }:
 
 let
-  pythonEnv = python37.withPackages (ps: with ps; [numpy pandas]);
+  pythonEnv = pkgs.python37.withPackages (ps: with ps; [numpy pandas]);
 in
-  python37.mkDerivation {
+  pkgs.python37.mkDerivation {
     name = "SOFTNI-SyncEvaluacion";
     src = ./.;
     buildInputs = [ pythonEnv ];

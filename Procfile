@@ -1,1 +1,1 @@
-web: nix-shell --run "python app.py" --pure
+web: gunicorn app:app

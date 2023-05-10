@@ -22,21 +22,9 @@ pip install python-dotenv
 
 Para el despliegue en railway es necesario:
 
-crear el archivo default.nix
-
-```
-{ pkgs ? import <nixpkgs> {} }:
-pkgs.python37Packages.buildPythonApplication {
-  pname = "my-flask-app";
-  src = ./.;
-  buildInputs = [ pkgs.python37Packages.flask ];
-}
-```
-
 Se crea el archivo `Procfile` en la raiz con lo siguiente:
 
-`web: nix-shell --run "python app.py" --pure`
-
+web: gunicorn app:app
 
 Se instala la herramienta:
 

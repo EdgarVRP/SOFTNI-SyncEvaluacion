@@ -13,5 +13,5 @@ api = Api(app)
 api.add_resource(EvaluacionController, "/Evaluaciones", "/Evaluaciones/<string:idPrestatario>")
 
 if __name__ == '__main__':
-    PORT = int(os.environ.get('PORT', 5000))
-    app.run(host='localhost', port=PORT)
+    PORT = int(os.environ.get('PORT', 5001))
+    app.run(host='localhost', port=PORT, debug=True)

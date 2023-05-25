@@ -1,4 +1,4 @@
-class Cliente:
+class Evaluacion:
     def __init__(self , _id, idPrestatario, nombre, ingreso_mensual,puntuacion_credito, creditoAceptado):
         self._id = _id
         self.idPrestatario = idPrestatario
